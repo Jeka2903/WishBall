@@ -27,29 +27,35 @@
             height: 100vw;
             margin: 0 auto;
             background-repeat: no-repeat ;  
-            background-color: rgba(5, 62, 184, 0.884); 
+            background-color: rgba(1, 33, 102, 0.979); 
             background-image: url(images/ball.png);
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
     }
     </style> 
-<script type="text/javascript">
 
-</script>
 
-<div class="content">
-    <p class="title">
+<div onclick="shaker()" class="content">
+    <p>
         Спрашивай
     </p>
 </div>
 
+<script>
+        function shaker() {
+            var choice = Math.ceil(Math.random()*5);
+            var answ = ["Конечно Да", "Нет","100% Да", "Возможно","Завари Чаю", ]
+            document.querySelector("p").innerText=answ[choice-1];
+        }
+</script>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
